@@ -1,6 +1,6 @@
 {
   "name": "brain_games_agalar",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Проект brain-games",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
@@ -26,7 +26,9 @@
     "url": "https://github.com/agalar/project-lvl1-s474/issues"
   },
   "homepage": "https://github.com/agalar/project-lvl1-s474#readme",
-  "dependencies": {},
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
