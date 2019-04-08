@@ -1,6 +1,6 @@
 {
   "name": "brain_games_agalar",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Проект brain-games",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
