@@ -1,19 +1,24 @@
 {
   "name": "brain_games_agalar",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "Проект brain-games",
   "main": "index.js",
   "bin": {
-    "start": "src/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js"
   },
   "keywords": [
     "hexlet"
   ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "test",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },
   "author": "agalar",
   "license": "MIT",
-  "scripts": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/agalar/project-lvl1-s474.git"
@@ -22,7 +27,8 @@
     "url": "https://github.com/agalar/project-lvl1-s474/issues"
   },
   "homepage": "https://github.com/agalar/project-lvl1-s474#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/node": "^7.2.2",
