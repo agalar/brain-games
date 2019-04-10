@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { isEven } from '..';
+import { checkEven } from '..';
 
-isEven();
+checkEven();
