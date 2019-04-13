@@ -6,4 +6,11 @@ const getRandomOperator = () => {
   return operators[operatorIndex];
 };
 
-export { getRandomInt, getRandomOperator };
+const getGcd = (a, b) => {
+  if (!b) {
+    return a;
+  }
+  return getGcd(b, a % b);
+};
+
+export { getRandomInt, getRandomOperator, getGcd };

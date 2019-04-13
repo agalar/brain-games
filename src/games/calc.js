@@ -2,7 +2,9 @@ import makeGame from '..';
 import { getRandomInt, getRandomOperator } from '../utils';
 import { cons } from 'hexlet-pairs';
 
-const calc = () => {
+const createCalcGame = () => {
+  const gameConditions = 'What is the result of the expression?';
+
   const calculateAnswer = (a, b, operator) => {
     let result;
     switch (operator) {
@@ -20,7 +22,7 @@ const calc = () => {
     return result;
   };
 
-  const getCalcPair = () => {
+  const getCalcOptions = () => {
     const firstOperand = getRandomInt(1, 10);
     const secondOperand = getRandomInt(1, 10);
     const operator = getRandomOperator();
@@ -30,7 +32,7 @@ const calc = () => {
     return cons(question, answer);
   };
 
-  makeGame('What is the result of the expression?', getCalcPair);
+  makeGame(gameConditions, getCalcOptions);
 };
 
-export default calc;
+export default createCalcGame;

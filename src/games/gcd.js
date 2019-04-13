@@ -1,25 +1,20 @@
 import makeGame from '..';
-import { getRandomInt } from '../utils';
+import { getRandomInt, getGcd } from '../utils';
 import { cons } from 'hexlet-pairs';
 
-const gcd = () => {
-  const getGcd = (a, b) => {
-    if (!b) {
-      return a;
-    }
-    return getGcd(b, a % b);
-  };
+const createGcdGame = () => {
+  const gameConditions = 'Find the greatest common divisor of given numbers.';
 
-  const getGcdPair = () => {
-    const firstOperand = getRandomInt(1, 12);
-    const secondOperand = getRandomInt(1, 12);
-    const question = `${firstOperand} ${secondOperand}`;
-    const answer = getGcd(firstOperand, secondOperand);
+  const getGcdOptions = () => {
+    const firstNumber = getRandomInt(1, 12);
+    const secondNumber = getRandomInt(1, 12);
+    const question = `${firstNumber} ${secondNumber}`;
+    const answer = getGcd(firstNumber, secondNumber);
 
     return cons(question, answer);
   };
 
-  makeGame('Find the greatest common divisor of given numbers.', getGcdPair);
+  makeGame(gameConditions, getGcdOptions);
 };
 
-export default gcd;
+export default createGcdGame;
