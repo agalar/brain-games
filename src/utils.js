@@ -13,4 +13,18 @@ const getGcd = (a, b) => {
   return getGcd(b, a % b);
 };
 
-export { getRandomInt, getRandomOperator, getGcd };
+const getNumberList = (start, step, length) => {
+  let newStep = start;
+  const list = [];
+
+  for (let i = 1; i <= length; i += 1) {
+    newStep += step;
+    list.push(newStep);
+  }
+
+  return list;
+};
+
+export {
+  getRandomInt, getRandomOperator, getGcd, getNumberList,
+};
