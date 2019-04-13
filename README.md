@@ -7,4 +7,5 @@
 ---
 ### Демонстрация установки и использования игр
 1) [brain even](https://asciinema.org/a/Uvs2eeeJ6LQ14flJqgaRfdA0H)
-1) [brain calc](https://asciinema.org/a/gPgH6OouVNLy8XlBFXlksyD1u)
+2) [brain calc](https://asciinema.org/a/gPgH6OouVNLy8XlBFXlksyD1u)
+3) [brain gcd](https://asciinema.org/a/XoDBWYbHFQKyo8ZuB4GKAYpiq)
