@@ -25,6 +25,17 @@ const getNumberList = (start, step, length) => {
   return list;
 };
 
+const isPrime = (number) => {
+  const minPrimeNumber = 2;
+
+  if (number < minPrimeNumber) return false;
+
+  for (let i = minPrimeNumber; i < number; i += 1) {
+    if (number % i === 0) return false;
+  }
+  return true;
+};
+
 export {
-  getRandomInt, getRandomOperator, getGcd, getNumberList,
+  getRandomInt, getRandomOperator, getGcd, getNumberList, isPrime,
 };

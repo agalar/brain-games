@@ -9,4 +9,5 @@
 1) [brain even](https://asciinema.org/a/Uvs2eeeJ6LQ14flJqgaRfdA0H)
 2) [brain calc](https://asciinema.org/a/gPgH6OouVNLy8XlBFXlksyD1u)
 3) [brain gcd](https://asciinema.org/a/XoDBWYbHFQKyo8ZuB4GKAYpiq)
-3) [brain progression](https://asciinema.org/a/PHg4w56KHZ7WwCYuteezYNChQ)
+4) [brain progression](https://asciinema.org/a/PHg4w56KHZ7WwCYuteezYNChQ)
+5) [brain prime](https://asciinema.org/a/JNg269o6gpKmM5V5PwmVUTyXA)
