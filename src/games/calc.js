@@ -7,25 +7,27 @@ const calc = () => {
   const operator = operators[operatorIndex];
 
   const getRandomResult = (a, b) => {
-    switch(operator) {
+    let result;
+    switch (operator) {
       case '+':
-        return a + b;
+        result = a + b;
+        break;
       case '-':
-        return a - b;
+        result = a - b;
+        break;
       case '*':
-        return a * b;
+        result = a * b;
+        break;
+      default:
+        console.log(`${operator} не является оператором`);
     }
+    return result;
   };
 
   const calcGame = () => () => {
     const pair = cons(getRandomInt(1, 100), getRandomInt(1, 100));
-
     const question = `${car(pair)} ${operator} ${cdr(pair)}`;
-
     const answer = getRandomResult(car(pair), cdr(pair));
-
-    // console.log(car(pair), 'operand1');
-    // console.log(cdr(pair), 'operand2');
 
     return cons(question, answer);
   };
