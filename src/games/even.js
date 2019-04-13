@@ -1,15 +1,16 @@
-import { brainGame, isEven, getRandomInt } from '..';
+import makeGame from '..';
+import { getRandomInt } from '../utils';
 import { cons } from 'hexlet-pairs';
 
 const checkEven = () => {
-  const evenGame = () => () => {
-    const question = getRandomInt(1, 100);
-    const answer = isEven(question) ? 'yes' : 'no';
+  const getEvenPair = () => {
+    const question = getRandomInt(1, 10);
+    const answer = question % 2 === 0 ? 'yes' : 'no';
 
     return cons(question, answer);
   };
 
-  brainGame('Answer "yes" if number even otherwise answer "no".', evenGame());
+  makeGame('Answer "yes" if number even otherwise answer "no".', getEvenPair);
 };
 
 export default checkEven;

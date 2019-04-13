@@ -1,27 +1,13 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
-const roundCount = 3; // Количество раундов
-const greeting = () => console.log('Welcome to the Brain Games!'); // Стандартное приветствие в игре
-
-// Получаем имя пользователя
-const getName = () => {
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!\n`);
-  return userName;
-};
-
-// получаем рандомное целое число
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-
-const isEven = number => number % 2 === 0;
-
-// флоу всех игр
-const brainGame = (gameConditions, gamePair) => {
-  greeting();
+const makeGame = (gameConditions, gamePair) => {
+  const numberOfRounds = 3;
+  console.log('Welcome to the Brain Games!');
   console.log(`${gameConditions}\n`);
 
-  const userName = getName();
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!\n`);
 
   const iter = (counter) => {
     if (counter === 0) {
@@ -44,7 +30,7 @@ const brainGame = (gameConditions, gamePair) => {
     return iter(counter - 1);
   };
 
-  return iter(roundCount);
+  return iter(numberOfRounds);
 };
 
-export { brainGame, isEven, getRandomInt };
+export default makeGame;

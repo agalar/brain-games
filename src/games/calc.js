@@ -1,12 +1,9 @@
-import { brainGame, getRandomInt } from '..';
-import { cons, car, cdr } from 'hexlet-pairs';
+import makeGame from '..';
+import { getRandomInt, getRandomOperator } from '../utils';
+import { cons } from 'hexlet-pairs';
 
 const calc = () => {
-  const operators = ['+', '-', '*'];
-  const operatorIndex = Math.floor(Math.random() * operators.length);
-  const operator = operators[operatorIndex];
-
-  const getRandomResult = (a, b) => {
+  const calculateAnswer = (a, b, operator) => {
     let result;
     switch (operator) {
       case '+':
@@ -19,20 +16,21 @@ const calc = () => {
         result = a * b;
         break;
       default:
-        console.log(`${operator} не является оператором`);
     }
     return result;
   };
 
-  const calcGame = () => () => {
-    const pair = cons(getRandomInt(1, 100), getRandomInt(1, 100));
-    const question = `${car(pair)} ${operator} ${cdr(pair)}`;
-    const answer = getRandomResult(car(pair), cdr(pair));
+  const getCalcPair = () => {
+    const firstOperand = getRandomInt(1, 10);
+    const secondOperand = getRandomInt(1, 10);
+    const operator = getRandomOperator();
+    const question = `${firstOperand} ${operator} ${secondOperand}`;
+    const answer = calculateAnswer(firstOperand, secondOperand, operator);
 
     return cons(question, answer);
   };
 
-  brainGame('What is the result of the expression?', calcGame());
+  makeGame('What is the result of the expression?', getCalcPair);
 };
 
 export default calc;
