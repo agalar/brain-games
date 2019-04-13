@@ -1,7 +1,5 @@
 import readlineSync from 'readline-sync';
-import {
-  cons, car, cdr,
-} from 'hexlet-pairs';
+import { car, cdr } from 'hexlet-pairs';
 
 const roundCount = 3; // Количество раундов
 const greeting = () => console.log('Welcome to the Brain Games!'); // Стандартное приветствие в игре
@@ -34,7 +32,7 @@ const brainGame = (gameConditions, gamePair) => {
     console.log(`Question: ${question}`);
 
     const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = cdr(pair);
+    const correctAnswer = String(cdr(pair));
 
     if (correctAnswer === answer) {
       console.log('Correct!');
