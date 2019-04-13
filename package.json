@@ -3,7 +3,8 @@
   "version": "0.4.1",
   "description": "Проект brain-games",
   "bin": {
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "keywords": [
     "hexlet"
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/agalar/project-lvl1-s474#readme",
   "dependencies": {
+    "hexlet-pairs": "^1.0.8",
     "readline-sync": "^1.4.9"
   },
   "devDependencies": {
