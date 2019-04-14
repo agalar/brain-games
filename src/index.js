@@ -19,7 +19,7 @@ const makeGame = (gameConditions, getGameData) => {
     console.log(`Question: ${question}`);
 
     const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = String(cdr(gameData));
+    const correctAnswer = cdr(gameData);
 
     if (correctAnswer === answer) {
       console.log('Correct!');

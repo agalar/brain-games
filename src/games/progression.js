@@ -24,7 +24,7 @@ const createProgressionGame = () => {
     const progression = getNumberList(progressionStart, progressionStep, progressionLength);
 
     const hiddenItemIndex = getRandom(0, progression.length - 1);
-    const answer = progression[hiddenItemIndex];
+    const answer = String(progression[hiddenItemIndex]);
 
     const getQuestion = () => {
       progression[hiddenItemIndex] = '..';

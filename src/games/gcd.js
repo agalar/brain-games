@@ -16,7 +16,7 @@ const createGcdGame = () => {
     const firstNumber = getRandom(1, 12);
     const secondNumber = getRandom(1, 12);
     const question = `${firstNumber} ${secondNumber}`;
-    const answer = getGcd(firstNumber, secondNumber);
+    const answer = String(getGcd(firstNumber, secondNumber));
 
     return cons(question, answer);
   };

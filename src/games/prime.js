@@ -7,8 +7,10 @@ const isPrime = (number) => {
 
   if (number < minPrimeNumber) return false;
 
-  for (let i = minPrimeNumber; i < number; i += 1) {
-    if (number % i === 0) return false;
+  for (let i = minPrimeNumber; i <= number / 2; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
   }
   return true;
 };

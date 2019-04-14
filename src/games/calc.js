@@ -33,7 +33,7 @@ const createCalcGame = () => {
     const secondOperand = getRandom(1, 10);
     const operator = getRandomOperator();
     const question = `${firstOperand} ${operator} ${secondOperand}`;
-    const answer = calculateAnswer(firstOperand, secondOperand, operator);
+    const answer = String(calculateAnswer(firstOperand, secondOperand, operator));
 
     return cons(question, answer);
   };
