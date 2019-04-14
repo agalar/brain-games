@@ -1,10 +1,16 @@
 import makeGame from '..';
-import { getRandomInt, getRandomOperator } from '../utils';
+import getRandom from '../utils';
 import { cons } from 'hexlet-pairs';
 
-const createCalcGame = () => {
-  const gameConditions = 'What is the result of the expression?';
+const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+  const operatorIndex = getRandom(0, operators.length - 1);
+  return operators[operatorIndex];
+};
 
+const gameConditions = 'What is the result of the expression?';
+
+const createCalcGame = () => {
   const calculateAnswer = (a, b, operator) => {
     let result;
     switch (operator) {
@@ -22,9 +28,9 @@ const createCalcGame = () => {
     return result;
   };
 
-  const getCalcOptions = () => {
-    const firstOperand = getRandomInt(1, 10);
-    const secondOperand = getRandomInt(1, 10);
+  const getGameData = () => {
+    const firstOperand = getRandom(1, 10);
+    const secondOperand = getRandom(1, 10);
     const operator = getRandomOperator();
     const question = `${firstOperand} ${operator} ${secondOperand}`;
     const answer = calculateAnswer(firstOperand, secondOperand, operator);
@@ -32,7 +38,7 @@ const createCalcGame = () => {
     return cons(question, answer);
   };
 
-  makeGame(gameConditions, getCalcOptions);
+  makeGame(gameConditions, getGameData);
 };
 
 export default createCalcGame;
